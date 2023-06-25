@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习1-取款机</title>
+</head>
+<body>
+<script>
+    let balance = 0
+    while (true) {
+        let op = +prompt(`
+             请输入您要进行的操作：
+             1.存款
+             2.取款
+             3.查询
+             4.退出
+             `)
+        if (op === 1) {
+            let num = +prompt(`请输入要存入的金额`)
+            balance += num
+        } else if (op === 2) {
+            let num2 = +prompt(`请输入要取出的金额`)
+            balance -= num2
+        } else if (op === 3) {
+            alert(`您的余额为${balance}`)
+        } else if (op === 4) {
+            break
+        }
+
+    }
+</script>
+</body>
+</html>
